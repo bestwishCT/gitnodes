@@ -1,18 +1,40 @@
 2021-1-8
 Git相关：
-git reset --hard ...
-4.3.7 删除文件并找回 
- 前提：删除前，文件存在时的状态提交到了本地库。 
- 操作：git reset --hard [指针位置] 
- 删除操作已经提交到本地库：指针位置指向历史记录 
- 删除操作尚未提交到本地库（添加到暂存区了）：指针位置使用 HEAD
+  设置签名：（必须的）
+   2种：项目级别/仓库级别
+   git config user.name tom_pro
+   git config user.email tom_pro@aliyun.com
+   git config --global user.name
 
-git diff 111.txe
-将工作区中的文件和暂存区进行比较(也即将工作区的内容add 到暂存区后 git diff后无变化)
+   查看状态：
+    git status
+   添加到暂存区：
+    git add file_name
+   提交到本地库：
+    git commit -m "message" file_name
+   查看历史记录：
+    git log
+    git log --pretty=oneline
+    git reflog
+   前进后退:
+   git reset --hard/mixed/soft [局部索引值]
+      参数比较：（可以类比三个人站一排，谁愿意参加站前一步）
+      --soft 仅仅在本地库移动HEAD指针
+      --mixed 在本地库移动HEAD指针，重置暂存区
+      --hard  在本地库移动HEAD指针，重置暂存区，重置本地库
+   删除文件并找回 
+      前提：删除前，文件存在时的状态提交到了本地库。 
+      操作：git reset --hard [指针位置] 
+      删除操作已经提交到本地库：指针位置指向历史记录 
+      删除操作尚未提交到本地库（添加到暂存区了）：指针位置使用 HEAD
 
-git diff [本地库中历史版本] [文件名] 
-将工作区中的文件和本地库历史记录比较 
-不带文件名比较多个文件
+   比较文件
+    git diff 111.txe
+    将工作区中的文件和暂存区进行比较(也即将工作区的内容add 到暂存区后 git diff后无变化)
+
+   git diff [本地库中历史版本] [文件名] 
+    将工作区中的文件和本地库历史记录比较 
+    不带文件名比较多个文件
 
 分支：branch
 创建：git branch hot_fix
