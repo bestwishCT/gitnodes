@@ -1,4 +1,5 @@
 2021-1-8
+Git相关：
 git reset --hard ...
 4.3.7 删除文件并找回 
  前提：删除前，文件存在时的状态提交到了本地库。 
@@ -54,7 +55,7 @@ github 上创建远程库
    操作要点：
      如果不是基于github远程库的最新版 不能push,必须先pull，如果进入冲突 解决即可（注意commit -m 不加文件名称）
 
-
+Docker相关：
 Docker Redis
 运行容器
 docker run -itd --name myredis -p 6379:6379 redis:5.0.8
@@ -63,5 +64,6 @@ docker exec -it redis-test /bin/bash
 redis-cli
 set test 1
 
+其他相关：
  org.springframework.web.context.ContextLoader的
  configureAndRefreshWebApplicationContext方法中完成所有bean的解析、加载和初始化。
