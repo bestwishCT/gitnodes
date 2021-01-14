@@ -1,0 +1,11 @@
+1 安装插件（eclipse）
+  点击eclipse上方工具栏的Help，选择Install New Software
+  选择离线安装：
+  Activiti BMPN 2.0 designer
+    step1:解压文件，目录如下：有四个jar包和一个压缩包
+    step2:将四个jar包放在eclipse的features目录中
+    step3:help-->install new software-->add，填上
+          Name：Activiti BPMN 2.0 designer
+          Location：选择下载的activiti-designer-5.18.0.zip目录
+    step4:重启eclipse
+
